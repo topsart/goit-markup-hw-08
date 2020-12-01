@@ -1,0 +1,45 @@
+.team-info {
+  background-color: $grey;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.team-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-bottom: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+  background-color: $white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-photo {
+  margin-bottom: 30px;
+}
+
+.team-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+  color: $title-color;
+}
+
+.team-position {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+}

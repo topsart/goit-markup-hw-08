@@ -1,0 +1,40 @@
+.what-we-do {
+  padding-top: 0;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+.what-we-do-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.what-we-do-item {
+  padding-bottom: 0;
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.what-we-do-thumb {
+  position: relative;
+}
+
+.what-we-do-info {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 27px 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.143;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $white;
+}

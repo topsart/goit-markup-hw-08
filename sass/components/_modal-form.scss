@@ -1,0 +1,188 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.lable {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.01em;
+}
+
+.input-wrapper {
+  position: relative;
+
+  &:focus-within > .modal-icon {
+    fill: $accent-color;
+    @extend %transition;
+  }
+
+  &:focus-within > .input {
+    outline: none;
+    border: 1px solid $accent-color;
+    @extend %transition;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.name-field {
+  margin-bottom: 10px;
+}
+
+.name-icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+}
+
+.tel-field {
+  margin-bottom: 10px;
+}
+
+.tel-icon {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  width: 13px;
+  height: 13px;
+}
+
+.email-form-field {
+  margin-bottom: 10px;
+}
+
+.mail-icon {
+  position: absolute;
+  top: 14px;
+  left: 13.5px;
+  width: 15px;
+  height: 12px;
+}
+
+.comment-field {
+  margin-bottom: 20px;
+
+  .comment-input {
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    height: 120px;
+    resize: none;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.167;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &:focus-within .comment-input {
+    outline: none;
+    border: 1px solid $accent-color;
+    @extend %transition;
+  }
+}
+
+.policy-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.policy-lable {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.71;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:checked + .checkbox-icon {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/icons/check-icon.svg);
+    background-size: contain;
+    background-origin: border-box;
+    @extend %transition;
+  }
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.policy-link {
+  color: $accent-color;
+  margin-left: 4px;
+}
+
+.modal-submit-btn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    @extend %transition;
+  }
+
+  &:hover .modal-close-btn-icon,
+  &:focus .modal-close-btn-icon {
+    fill: $accent-color;
+    @extend %transition;
+  }
+}
+
+.modal-close-btn-icon {
+  width: 11px;
+  height: 11px;
+}

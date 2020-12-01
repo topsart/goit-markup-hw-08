@@ -1,0 +1,19 @@
+.dark-bg {
+  background-color: $dark-bg;
+
+  .title,
+  .link,
+  .logo {
+    color: $white;
+  }
+
+  .link:hover,
+  .link:focus {
+    color: $accent-color;
+    @extend %transition;
+  }
+
+  .footer-link {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
