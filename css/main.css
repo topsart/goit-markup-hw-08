@@ -61,11 +61,29 @@ address {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .list {
@@ -147,11 +165,16 @@ address {
   fill: #afb1b8;
 }
 
+.footer-social {
+  margin-bottom: 60px;
+}
+
 .footer-social .title {
   margin-top: 12px;
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.143;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -379,15 +402,16 @@ address {
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.143;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .email-field {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -403,11 +427,14 @@ address {
 
 .sub-btn {
   position: relative;
+  display: block;
   min-width: 200px;
   padding-top: 10px;
   padding-right: 62px;
   padding-bottom: 10px;
   padding-left: 29px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sub-btn::after {
@@ -422,8 +449,8 @@ address {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section-title {
@@ -439,6 +466,12 @@ address {
 
 .header .logo {
   margin-right: 93px;
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    display: none;
+  }
 }
 
 .header-container {
@@ -531,13 +564,15 @@ address {
   align-items: center;
 }
 
-.section-hero {
-  min-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio-page/hero-img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+@media screen and (min-width: 480px) {
+  .section-hero {
+    min-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero-img-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .hero-content {
@@ -548,12 +583,17 @@ address {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
-  max-width: 696px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-title {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
 }
 
 .hero-btn {
@@ -562,16 +602,11 @@ address {
 }
 
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
   margin-top: -30px;
 }
 
 .skills-item {
-  margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc(100% / 4 - 30px);
 }
 
 .skills-item::before {
@@ -605,6 +640,7 @@ address {
   margin-bottom: 10px;
   line-height: 1.143;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .skills-info {
@@ -613,7 +649,7 @@ address {
 }
 
 .what-we-do {
-  padding-top: 0;
+  display: none;
 }
 
 .what-we-do .section-title {
@@ -704,19 +740,24 @@ address {
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
-.customers-item:not(:last-child) {
-  margin-right: 30px;
+.customers-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 2 - 30px);
 }
 
 .customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 90px;
+  flex-basis: calc(100% / 2 - 30px);
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -770,14 +811,14 @@ address {
   padding-bottom: 60px;
 }
 
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+.footer-address {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer-item:not(:last-child) {

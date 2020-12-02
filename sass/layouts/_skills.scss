@@ -1,14 +1,14 @@
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: -30px;
   margin-top: -30px;
 }
 
 .skills-item {
-  margin-left: 30px;
+  // margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc(100% / 4 - 30px);
+  // flex-basis: calc(100% / 4 - 30px);
 
   &::before {
     display: block;
@@ -42,6 +42,7 @@
   margin-bottom: 10px;
   line-height: 1.143;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .skills-info {
