@@ -66,6 +66,18 @@ address {
   margin-left: auto;
 }
 
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -242,8 +254,8 @@ address {
 }
 
 .section-title {
-  font-size: 36px;
-  line-height: 1.166;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
 }
 
@@ -256,7 +268,7 @@ address {
   margin-right: 93px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .header {
     display: none;
   }

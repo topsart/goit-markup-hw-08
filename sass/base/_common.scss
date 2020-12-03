@@ -54,6 +54,24 @@ address {
   margin-left: auto;
 }
 
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
+// @media screen and (min-width: 350px) {
+//   .container {
+//     width: 350px;
+//   }
+// }
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
