@@ -1,6 +1,11 @@
 .what-we-do {
-  // padding-top: 0;
-  display: none;
+  padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  padding-top: 0;
 
   .section-title {
     margin-bottom: 50px;

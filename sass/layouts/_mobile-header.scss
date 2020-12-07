@@ -1,0 +1,121 @@
+.mobile-menu-wrapper {
+  position: relative;
+}
+
+.mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fff;
+
+  z-index: 100;
+
+  &.is-open {
+    opacity: 1;
+    @extend %transition;
+    transform: translateX(0);
+    pointer-events: visible;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.mobile-header-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.mobile-header-menu-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.mobile-header-link {
+  font-weight: 500;
+  line-height: 1.143;
+}
+
+.mobile-current-page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: $accent-color;
+}
+
+.mobile-header-contacts {
+  text-align: center;
+}
+
+.mobile-header-contacts-item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.mobile-header-contacts-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus .header-icons-mail,
+  &:hover .header-icons-mail,
+  &:hover .header-icons-phone,
+  &:focus .header-icons-phone {
+    fill: $accent-color;
+    @extend %transition;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
+
+  .mobile-menu-close-icon {
+    display: none;
+  }
+
+  &.is-open .mobile-menu-close-icon {
+    display: block;
+  }
+
+  &.is-open .mobile-menu-open-icon {
+    display: none;
+  }
+
+  &:hover .mobile-menu-btn-icon,
+  &:focus .mobile-menu-btn-icon {
+    fill: $accent-color;
+    @extend %transition;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.mobile-menu-btn-icon {
+  width: 40px;
+  height: 40px;
+}

@@ -1,14 +1,25 @@
 .skills-list {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-left: -30px;
   margin-top: -30px;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .skills-item {
-  // margin-left: 30px;
   margin-top: 30px;
-  // flex-basis: calc(100% / 4 - 30px);
+
+  @include for-size(tablet) {
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @include for-size(desktop) {
+    margin-left: 30px;
+    flex-basis: calc(100% / 4 - 30px);
+  }
 
   &::before {
     display: block;
@@ -22,19 +33,19 @@
   }
 
   &:nth-child(1)::before {
-    background-image: url(../images/studio-page/antenna.svg);
+    background-image: url(../images/svg/antenna.svg);
   }
 
   &:nth-child(2)::before {
-    background-image: url(../images/studio-page/clock.svg);
+    background-image: url(../images/svg/clock.svg);
   }
 
   &:nth-child(3)::before {
-    background-image: url(../images/studio-page/diagram.svg);
+    background-image: url(../images/svg/diagram.svg);
   }
 
   &:nth-child(4)::before {
-    background-image: url(../images/studio-page/astronaut.svg);
+    background-image: url(../images/svg/astronaut.svg);
   }
 }
 
@@ -43,6 +54,10 @@
   line-height: 1.143;
   text-transform: uppercase;
   text-align: center;
+
+  @include for-size(desktop) {
+    text-align: left;
+  }
 }
 
 .skills-info {

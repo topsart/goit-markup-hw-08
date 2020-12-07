@@ -1,18 +1,49 @@
 .portfolio {
-  padding: 94px 0px;
+  padding: 60px 0px;
+
+  @include for-size(desktop) {
+    padding: 94px 0px;
+  }
 }
 
 .portfolio-nav {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @include for-size(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-menu-list {
   display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+
+  @include for-size(tablet) {
+    justify-content: center;
+  }
 }
 
-.potfolio-menu-item:not(:last-child) {
-  margin-right: 8px;
+.potfolio-menu-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .btn.potfolio-btn {
@@ -34,23 +65,33 @@
 }
 
 .potfolio-menu {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .portfolio-item {
   border: 1px solid #eeeeee;
-  margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc(100% / 3 - 30px);
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
     @extend %transition;
+  }
+
+  @include for-size(tablet) {
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @include for-size(desktop) {
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
 

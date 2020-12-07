@@ -7,12 +7,6 @@
   }
 }
 
-@media screen and (min-width: 320px) {
-  .header {
-    display: none;
-  }
-}
-
 .header-container {
   display: flex;
   justify-content: flex-end;
@@ -33,7 +27,11 @@
 }
 
 .header-menu {
-  display: inline-flex;
+  display: none;
+
+  @include for-size(tablet) {
+    display: inline-flex;
+  }
 }
 
 .header-menu-item {
@@ -61,7 +59,29 @@
 }
 
 .header-contacts {
-  display: flex;
+  display: none;
+
+  @include for-size(tablet) {
+    display: inline;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
+.header-contacts-item {
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .header-contacts-link {
@@ -78,10 +98,12 @@
     fill: $accent-color;
     @extend %transition;
   }
-}
 
-.header-contacts-item:not(:last-child) {
-  margin-right: 50px;
+  @include for-size(desktop) {
+    font-style: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.02em;
+  }
 }
 
 .header-icons-mail {

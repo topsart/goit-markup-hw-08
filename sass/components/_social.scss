@@ -37,6 +37,10 @@
 .footer-social {
   margin-bottom: 60px;
 
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+
   .title {
     margin-top: 12px;
     margin-bottom: 20px;
@@ -45,6 +49,10 @@
     text-align: center;
     text-transform: uppercase;
     color: $white;
+
+    @include for-size(desktop) {
+      text-align: left;
+    }
   }
 
   .social-icons-svg {

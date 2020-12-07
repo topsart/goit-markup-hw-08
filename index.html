@@ -27,10 +27,16 @@
   	        			<li class="header-menu-item">
 							<a href="" class="link header-link">Контакты</a>
 						</li>
-  	      			</ul>
-  	    		</nav>
+					</ul>						
+				</nav>
+				<button type="button" class="mobile-menu-btn" aria-expanded="false" data-menu-button>
+					<svg class="mobile-menu-btn-icon" aria-label="Переключатель мобильного меню">
+						<use class="mobile-menu-open-icon" href="./images/sprite.svg#mobile-menu-open-icon"></use>
+						<use class="mobile-menu-close-icon" href="./images/sprite.svg#mobile-menu-close-icon"></use>
+					</svg>
+				</button>
   	    		<!-- Контакты -->
-  	    		<ul class="header-contacts list">
+  	    		<ul class="list header-contacts">
   	      			<li class="header-contacts-item">
 						<a href="mailto:info@devstudio.com" class="link header-contacts-link">							
 							<svg class="header-icons-mail">
@@ -49,7 +55,41 @@
 					</li>
 			  	</ul>
 			</div>
-  	  	</header>
+		</header>
+		<!-- Mobile шапка -->
+		<div class="mobile-menu-wrapper">
+		<div class="mobile-menu" data-menu>
+				<ul class="list mobile-header-menu">
+					<li class="mobile-header-menu-item">
+						<a href="" class="link mobile-header-link mobile-current-page">Студия</a>
+					</li>
+					<li class="mobile-header-menu-item">
+						<a href="./portfolio.html" class="link mobile-header-link">Портфолио</a>
+					</li>
+					<li class="mobile-header-menu-item">
+						<a href="" class="link mobile-header-link">Контакты</a>
+					</li>
+				</ul>
+				<ul class="list mobile-header-contacts">
+					<li class="mobile-header-contacts-item">
+						<a href="mailto:info@devstudio.com" class="link mobile-header-contacts-link">
+							<svg class="header-icons-mail">
+								<use href="./images/sprite.svg#mail-icon"></use>
+							</svg>
+							info@devstudio.com
+						</a>
+					</li>
+					<li class="mobile-header-contacts-item">
+						<a href="tel:+380961111111" class="link mobile-header-contacts-link">
+							<svg class="header-icons-phone">
+								<use href="./images/sprite.svg#smartphone-icon"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
+				</ul>
+		</div>
+		</div>
   	  	<!-- Основной контент -->
   	  	<main>
   	    	<!-- Баннер -->
@@ -105,12 +145,10 @@
   	        			<li class="what-we-do-item">
   	          				<a href="">
 								<div class="what-we-do-thumb">
-  	            					<img
-  	              						src="./images/studio-page/code.jpg"
-  	              						alt="Процесс написания кода"
-  	              						width="370"
-  	              						height="294"
-									/>
+									<picture>
+										<source srcset="./images/desktop/studio/code.jpg 1x, ./images/desktop/studio/code@2x.jpg 2x">
+  	            						<img src="./images/studio-page/code.jpg" alt="Процесс написания кода" width="370" height="294"/>
+									</picture>
 									<p class="what-we-do-info">Десктопные приложения</p>
 								</div>
   	          				</a>
@@ -118,12 +156,10 @@
   	        			<li class="what-we-do-item">
   	          				<a href="">
 								<div class="what-we-do-thumb">
-									<img
-										src="./images/studio-page/app.jpg"
-										alt="Процесс создания приложений"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source srcset="./images/desktop/studio/app.jpg 1x, ./images/desktop/studio/app@2x.jpg 2x">
+										<img src="./images/studio-page/app.jpg" alt="Процесс создания приложений" width="370" height="294"/>
+									</picture>
 									<p class="what-we-do-info">Мобильные приложения</p>
 								</div>
   	          				</a>
@@ -131,12 +167,10 @@
   	        			<li class="what-we-do-item">
   	          				<a href="">
 								<div class="what-we-do-thumb">
-									<img
-										src="./images/studio-page/design.jpg"
-										alt="Дизайнер с планшетом"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source srcset="./images/desktop/studio/design.jpg 1x, ./images/desktop/studio/design@2x.jpg 2x">
+										<img src="./images/studio-page/design.jpg" alt="Дизайнер с планшетом" width="370" height="294"/>
+									</picture>
 									<p class="what-we-do-info">Дизайнерские решения</p>  
 								</div>
   	          				</a>
@@ -150,12 +184,12 @@
   	      			<h2 class="title section-title">Наша команда</h2>
   	      			<ul class="list team-list">
   	        			<li class="team-item">
-  	        	  			<img class="team-photo"
-  	        	    			src="./images/studio-page/product_designer.jpg"
-  	        	    			alt="Игорь Демьяненко. Product Designer."
-  	        	    			width="450"
-  	        	    			height="460"
-  	        	  			/>
+							<picture>
+								<source srcset="./images/mobile/studio/product_designer.jpg 1x, ./images/mobile/studio/product_designer@2x.jpg 2x" media="(max-width: 767px)">
+								<source srcset="./images/tablet/studio/product_designer.jpg 1x, ./images/tablet/studio/product_designer@2x.jpg 2x" media="(min-width: 768px)">
+								<source srcset="./images/desktop/studio/product_designer.jpg 1x, ./images/desktop/studio/product_designer@2x.jpg 2x" media="(min-width: 1200px)">
+  	        	  				<img class="team-photo" src="./images/desktop/studio/product_designer.jpg" alt="Игорь Демьяненко. Product Designer." width="450px"/>
+							</picture>
   	        	  			<h3 class="team-title">Игорь Демьяненко</h3>
 							<p class="team-position">Product Designer</p>
 							<ul class="list social-icons">
@@ -194,13 +228,16 @@
 							</ul>
   	        			</li>
   	        			<li class="team-item">
-  	        	  			<img class="team-photo"
-  	        	    			src="./images/studio-page/frontend_developer.jpg"
-  	        	    			alt="Ольга Репина. Frontend Developer."
-  	        	    			width="450"
-  	        	    			height="460"
-  	        	  			/>
-  	        	  			<h3 class="team-title">Ольга Репина</h3>
+							<picture>
+								<source srcset="./images/mobile/studio/frontend_developer.jpg 1x, ./images/mobile/studio/frontend_developer@2x.jpg 2x"
+									media="(max-width: 767px)">
+								<source srcset="./images/tablet/studio/frontend_developer.jpg 1x, ./images/tablet/studio/frontend_developer@2x.jpg 2x"
+									media="(min-width: 768px)">
+								<source srcset="./images/desktop/studio/frontend_developer.jpg 1x, ./images/desktop/studio/frontend_developer@2x.jpg 2x"
+									media="(min-width: 1200px)">
+  	        	  				<img class="team-photo" src="./images/desktop/studio/frontend_developer.jpg" alt="Ольга Репина. Frontend Developer." width="450px"/>
+							</picture>
+					 		<h3 class="team-title">Ольга Репина</h3>
 							<p class="team-position">Frontend Developer</p>
 							<ul class="list social-icons">
 								<li class="social-icons-item">
@@ -238,12 +275,18 @@
 							</ul>
   	        			</li>
   	        			<li class="team-item">
-  	        	  			<img class="team-photo"
-  	        	    			src="./images/studio-page/marketing.jpg"
-  	        	    			alt="Николай Тарасов. Marketing."
-  	        	    			width="450"
-  	        	    			height="460"
-  	        	  			/>
+							<picture>
+								<source
+									srcset="./images/mobile/studio/marketing.jpg 1x, ./images/mobile/studio/marketing@2x.jpg 2x"
+									media="(max-width: 767px)">
+								<source
+									srcset="./images/tablet/studio/marketing.jpg 1x, ./images/tablet/studio/marketing@2x.jpg 2x"
+									media="(min-width: 768px)">
+								<source
+									srcset="./images/desktop/studio/marketing.jpg 1x, ./images/desktop/studio/marketing@2x.jpg 2x"
+									media="(min-width: 1200px)">
+  	        	  				<img class="team-photo" src="./images/desktop/studio/marketing.jpg" alt="Николай Тарасов. Marketing." width="450px"/>
+							</picture>
   	        	  			<h3 class="team-title">Николай Тарасов</h3>
 							<p class="team-position">Marketing</p>
 							<ul class="list social-icons">
@@ -282,12 +325,15 @@
 							</ul>
   	        			</li>
   	        			<li class="team-item">
-  	        	  			<img class="team-photo"
-  	        	    			src="./images/studio-page/ui_designer.jpg"
-  	        	    			alt="Михаил Ермаков. UI Designer."
-  	        	    			width="450"
-  	        	    			height="460"
-  	        	  			/>
+							<picture>
+								<source srcset="./images/mobile/studio/ui_designer.jpg 1x, ./images/mobile/studio/ui_designer@2x.jpg 2x"
+									media="(max-width: 767px)">
+								<source srcset="./images/tablet/studio/ui_designer.jpg 1x, ./images/tablet/studio/ui_designer@2x.jpg 2x"
+									media="(min-width: 768px)">
+								<source srcset="./images/desktop/studio/ui_designer.jpg 1x, ./images/desktop/studio/ui_designer@2x.jpg 2x"
+									media="(min-width: 1200px)">
+  	        	  			<img class="team-photo" src="./images/desktop/studio/ui_designer.jpg" alt="Михаил Ермаков. UI Designer." width="450px"/>
+							</picture>
   	        	  			<h3 class="team-title">Михаил Ермаков</h3>
 							<p class="team-position">UI Designer</p>
 							<ul class="list social-icons">
@@ -381,7 +427,8 @@
   	  	<!-- Footer -->
   	  	<footer class="footer dark-bg">
 			<div class="container">
-				<div class="footer-address">
+				<div class="footer-add_soc-wrapper">
+					<div class="footer-address">
   	    			<a href="./index.html" class="logo"><span class="logo-part">Web</span>Studio</a>
   	    			<address>
 						<ul class="list">
@@ -390,8 +437,8 @@
 							<li class="footer-item"><a href="tel:+380961111111" class="link footer-link">+38 096 111 11 11</a></li>
 						</ul>
 					</address>
-				</div>
-				<div class="footer-social">
+					</div>
+					<div class="footer-social">
 					<h4 class="title">Присоединяйтесь</h4>
 					<ul class="list social-icons">
 						<li class="social-icons-item">
@@ -427,6 +474,7 @@
 							</a>
 						</li>
 					</ul>
+					</div>
 				</div>
 				<div class="subscribe-form">
 					<h4 class="title">Подпишитесь на рассылку</h4>
@@ -497,5 +545,6 @@
 		</div>
 		<!-- Скрипт модалки -->
 		<script src="./js/modal.js"></script>
+		<script src="./js/menu.js"></script>
   	</body>
 </html>
