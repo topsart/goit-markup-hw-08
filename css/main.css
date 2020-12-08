@@ -649,11 +649,16 @@ address {
   .header-contacts-item {
     display: flex;
     flex-direction: column;
+  }
+  .header-contacts-item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
 @media (min-width: 1200px) {
+  .header-contacts-item {
+    margin-bottom: 0;
+  }
   .header-contacts-item:not(:last-child) {
     margin-right: 50px;
   }
