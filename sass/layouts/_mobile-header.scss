@@ -45,7 +45,10 @@
 
 .mobile-header-link {
   font-weight: 500;
-  line-height: 1.143;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: $title-color;
 }
 
 .mobile-current-page::after {
@@ -73,6 +76,9 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  line-height: 1.167;
+  color: $main-color;
 
   &:focus .header-icons-mail,
   &:hover .header-icons-mail,

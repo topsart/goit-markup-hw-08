@@ -398,11 +398,9 @@ address {
 }
 
 @media (min-width: 1200px) {
-  .header-contacts-item {
-    margin-bottom: 0;
-  }
   .header-contacts-item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 
@@ -490,7 +488,10 @@ address {
 
 .mobile-header-link {
   font-weight: 500;
-  line-height: 1.143;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: #212121;
 }
 
 .mobile-current-page::after {
@@ -516,6 +517,9 @@ address {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  line-height: 1.167;
+  color: #757575;
 }
 
 .mobile-header-contacts-link:focus .header-icons-mail,

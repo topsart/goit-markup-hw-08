@@ -80,9 +80,9 @@
   }
 
   @include for-size(desktop) {
-    margin-bottom: 0;
     &:not(:last-child) {
       margin-right: 50px;
+      margin-bottom: 0;
     }
   }
 }
