@@ -364,11 +364,17 @@ address {
   content: '';
   position: absolute;
   left: 0;
-  top: 50.2px;
+  top: 55px;
   width: 100%;
   height: 3px;
   border-radius: 2px;
   background-color: #2196f3;
+}
+
+@media (min-width: 1200px) {
+  .current-page::after {
+    top: 50.2px;
+  }
 }
 
 .header-contacts {
@@ -448,7 +454,7 @@ address {
 .mobile-menu {
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-100%);
+  transform: translate(0%, -10%);
   position: absolute;
   top: 100%;
   left: 0;
